@@ -1,0 +1,83 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "manifest_version": 3,
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "tabs",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "externally_connectable": {
+    "matches": [
+      "*://web.whatsapp.com/*"
+    ]
+  },
+  "options_page": "dashboard.html",
+  "content_scripts": [
+    {
+      "js": [
+        "static/js/chunk-ig6NKpS7.js"
+      ],
+      "run_at": "document_end",
+      "matches": [
+        "*://web.whatsapp.com/*"
+      ],
+      "css": [
+        "assets/ZapVoiceLogo.css",
+        "assets/send-contact-node.css"
+      ]
+    },
+    {
+      "js": [
+        "static/js/contentScript/index.js"
+      ],
+      "run_at": "document_end",
+      "matches": [
+        "*://web.whatsapp.com/*"
+      ]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "64": "icon64.png",
+      "128": "icon128.png"
+    },
+    "default_title": "ZapVoice Crack"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "64": "icon64.png",
+    "128": "icon128.png"
+  },
+  "host_permissions": [
+    "*://web.whatsapp.com/*"
+  ],
+  "name": "ZapVoice Crack",
+  "version": "4.0.0",
+  "version_name": "4.0.0",
+  "description": "Desbloqueie o potencial do seu Whatsapp Web, otimize seu atendimento e aumente suas conversões!",
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "*://web.whatsapp.com/*"
+      ],
+      "resources": [
+        "static/js/chunk-GhcM6LL5.js",
+        "static/js/chunk-B5T44RpL.js",
+        "static/js/chunk-C2h31Y-B.js",
+        "static/js/chunk-BqDfMDXV.js",
+        "static/js/chunk-Da8Krtva.js",
+        "static/js/chunk-ig6NKpS7.js"
+      ]
+    }
+  ]
+}
